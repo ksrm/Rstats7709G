@@ -1,0 +1,50 @@
+---
+title: "Lab 1"
+author: "KSRM"
+date: "2/7/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+```
+
+
+```{r}
+values <- read_xlsx("Data/Lab1_data.xlsx", range = anchored("B4", dim = c(10,12)), col_names = FALSE)
+values <- as.data.frame(t(values))
+data <- c()
+  for(i in values){
+   data <- data+i
+   return(data)
+  }
+data <- i
+
+wide_variables <- read_xlsx("Data/Lab1_data.xlsx", range = anchored("B2", dim = c(2,12)))
+ab <- t(wide_variables)
+abc<- paste(rownames(ab), ab)
+test <- matrix(rep(abc, 10))
+
+observation_count <- rep(1:10, each = 12)
+observation_count <- as.character(observation_count)
+final <- cbind(observation_count, test, data)
+colnames(final) <- c("participant", "group", "value")
+final 
+
+testing <- matrix(rep(abc, 10))
+testing <- gsub("...3|4|5|6", "_Noisy", testing, perl=TRUE)
+testing <- gsub("...7|8|9", "Quiet", testing, perl=TRUE)
+final.2 <- cbind(observation_count, testing, data)
+as.data.frame(final.2)
+colnames(final.2) <- c("participant", "group", "value")
+final.2
+ 
+```
+
+Download the Lab1_data.xlsx data file. This file contains fake data for a 2x3x2 repeated measures design, for 10 participants. The data is in wide format. Here is the link.
+https://github.com/CrumpLab/rstatsmethods/raw/master/vignettes/Stats2/Lab1_data.xlsx
+
+Your task is to convert the data to long format, and store the long-format data in a data.frame or tibble. Print out some of the long-form data in your lab1.Rmd, to show that you did make the appropriate conversion. For extra fun, show two different ways to solve the problem.
+
+If you need to modify the excel by hand to help you solve the problem that is OK, just make a note of it in your lab work.
