@@ -1,0 +1,45 @@
+---
+title: "Lab 2 Multiple Regression I"
+author: "KSRM"
+date: "2/14/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(tibble)
+```
+
+
+The following changes have been made to figure 5.5 (pg 91/111:
+
+- change to x-axis and y-axis titles 
+- x-axis and y-axis ticks made the same
+- implement different symbols to differentiate the lines 
+```{r}
+slamecka_design <- tibble(number_of_learning_trials = rep(c(2,4,8), each=6),
+                          number_of_IL = rep(rep(c(2,4,8), 2), 3),
+                          subjects = 1:18,
+                          recall = c(35,21,6,
+                                   39,31,8,
+                                   40,34,18,
+                                   52,42,26,
+                                   61,58,46,
+                                   73,66,52
+                                   )
+                          )
+```
+
+
+
+```{r}
+ggplot(slamecka_design,aes(x=number_of_IL,
+                           group = number_of_learning_trials,
+                           y=recall))+
+  geom_line(stat = "summary", fun = "mean")+
+  geom_point(stat = "summary", fun = "mean",)+
+  theme_classic()
+```
+
