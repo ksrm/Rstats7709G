@@ -8,7 +8,6 @@ output: html_document
 Confidence in Submission: 70 
 My response to the second problem is different from the solution code. I need to fix the learning trial labels using mapply. 
 ```{r setup, include=FALSE}
-install.packages("knitr")
 knitr::opts_chunk$set(echo = TRUE)
 
 library(ggplot2)
