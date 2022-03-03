@@ -1,7 +1,10 @@
-pandoc: 2.14.0.3
+pandoc: 1.19.2.1
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   Lab 1: Lab 1.html
-last_built: 2022-02-12T17:16Z
+  Lab 2 Multiple Regression I: Lab 2 Multiple Regression I.html
+  Lab 3 Multiple Regression II: Lab 3 Multiple Regression II.html
+  Lab 4 ANOVA: Lab 4 ANOVA.html
+last_built: 2022-03-03T00:11Z
 
