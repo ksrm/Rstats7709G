@@ -1,0 +1,7 @@
+"0","usethis::use_pkgdown()
+"
+"2","[32m✓[39m Setting active project to [34m'/Users/ksrm/Dropbox/GitHub/Rstats7709G'[39m"
+"2","[32m✓[39m Adding [34m'^_pkgdown\\.yml$'[39m, [34m'^docs$'[39m, [34m'^pkgdown$'[39m to [34m'vignettes/.Rbuildignore'[39m"
+"2","[32m✓[39m Adding [34m'docs'[39m to [34m'vignettes/.gitignore'[39m"
+"2","[32m✓[39m Writing [34m'_pkgdown.yml'[39m"
+"2","[31m•[39m Modify [34m'_pkgdown.yml'[39m"

@@ -1,0 +1,29 @@
+---
+title: "Lab 4 ANOVA"
+author: "KSRM"
+date: "3/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The example data below demonstrates that t.testing and anova can produce the same results. The p-values are the same. 
+```{r}
+library(tibble)
+example_data <- tibble(Group = rep(c("A","B"), each = 5),
+                       DV = c(2,4,3,5,4,7,6,5,6,7))
+
+t.stat <-t.test(DV~Group, var.equal = TRUE, data = example_data)
+
+aov.stat <- summary(aov(DV~Group, data = example_data))
+
+(round(t.stat$p.value, digits = 9) == round(aov.stat[[1]]$'Pr(>F)'[1], digits = 9))
+```
+
+The F statistic is the same as the t statistic squared. 
+```{r}
+((t.stat$statistic)^2 == round(aov.stat[[1]]$'F value'[1], digits = 1))
+```
+

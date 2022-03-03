@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1646246330005.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "53E014F5",
+    "lastKnownWriteTime" : 1646248804,
+    "last_content_update" : 1646248804718,
+    "path" : "~/Dropbox/GitHub/Rstats7709G/vignettes/Lab 4 ANOVA.Rmd",
+    "project_path" : "vignettes/Lab 4 ANOVA.Rmd",
+    "properties" : {
+        "cursorPosition" : "23,0",
+        "last_setup_crc32" : "",
+        "scrollLine" : "20",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
